@@ -32,21 +32,21 @@ counterApp.addEventListener('click', (e) => {
     }
 
     if (Number(nextValue) % 2 === 0) {
-      typeNumber.pair.classList.add('is-pair')
-      typeNumber.odd.classList.remove('is-odd')
-      countText.classList.remove('is-zero')
+      typeNumber.pair.classList.add('pair')
+      typeNumber.odd.classList.remove('odd')
+      countText.classList.remove('zero')
     }
 
     if (Number(nextValue) % 2 !== 0) { 
-      typeNumber.pair.classList.remove('is-pair')
-      typeNumber.odd.classList.add('is-odd')
-      countText.classList.remove('is-zero')
+      typeNumber.pair.classList.remove('pair')
+      typeNumber.odd.classList.add('odd')
+      countText.classList.remove('zero')
     }
 
     if (Number(nextValue) === 0) {
-      typeNumber.odd.classList.remove('is-odd')
-      typeNumber.pair.classList.remove('is-pair')
-      countText.classList.add('is-zero')
+      typeNumber.odd.classList.remove('odd')
+      typeNumber.pair.classList.remove('pair')
+      countText.classList.add('zero')
     }
   }
 })

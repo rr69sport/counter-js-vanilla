@@ -1,9 +1,15 @@
 :root {
-  --main-color: #0d93ec;
-  --main-color-transparent: #0d93ec15;
-  --dark-color: #15171d;
-  --alt-dark-color: #242427;
-  --light-color: #eaf0fd;
+  --red: 255;
+  --green: 102;
+  --blue: 0;
+  --alpha: 0.1;
+
+  --main-color: rgb(var(--red), var(--green), var(--blue));
+  --main-color-transparent: rgba(var(--red), var(--green), var(--blue), var(--alpha));
+
+  --dark-color: rgb(21, 23, 29);
+  --alt-dark-color: rgb(36, 36, 39);
+  --light-color: rgb(234, 240, 253);
 
   --gap: 10px;
   --border-radius: 4px;
@@ -20,6 +26,7 @@ body {
 
 .title {
   text-align: center;
+  color: var(--main-color);
 }
 
 .section,
@@ -67,8 +74,9 @@ body {
   background-color: var(--dark-color);
 }
 
-.button:hover {
-  background-color: var(--main-color-transparent);
+.button:not(:disabled):hover {
+  /* background-color: var(--main-color-transparent); */
+  text-decoration: underline;
 }
 
 .info {
@@ -90,8 +98,8 @@ body {
   background-color: var(--dark-color);
 }
 
-.is-pair,
-.is-odd,
-.is-zero {
+.pair,
+.odd,
+.zero {
   color: var(--main-color);
 }
